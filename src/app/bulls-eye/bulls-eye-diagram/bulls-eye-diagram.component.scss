@@ -1,0 +1,72 @@
+/* src/app/bulls-eye-diagram/bulls-eye-diagram.component.scss */
+.bulls-eye-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.patient-field {
+    width: 100%;
+    max-width: 400px;
+}
+
+.diagram-wrapper {
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ccc;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.summary {
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+/* Color boxes en la segunda sección */
+.summary {
+  .color-label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    font-weight: normal; /* o tu estilo */
+
+    .box {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      margin-right: 0.5rem;
+      border: 1px solid #333;
+    }
+    .box.white {
+      background: #ffffff;
+    }
+    .box.purple {
+      background: purple;
+    }
+    .box.yellow {
+      background: yellow;
+    }
+    .box.blue {
+      background: blue;
+    }
+    .box.red {
+      background: red;
+    }
+  }
+}
+
+.export-btns {
+  text-align: center;
+  margin: 1rem 0;
+  button {
+    margin: 0 .5rem;
+  }
+}

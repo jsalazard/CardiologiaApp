@@ -1,0 +1,68 @@
+<!-- src/app/bulls-eye-diagram/bulls-eye-diagram.component.html -->
+<mat-card class="bulls-eye-container">
+    <h2>Diagrama Bull’s Eye</h2>
+
+    <!--mat-form-field appearance="fill" class="patient-field">
+        <mat-label>Nombre del paciente</mat-label>
+        <input matInput [(ngModel)]="patientName" placeholder="Ej. Juan Pérez" />
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field-->
+
+    <div class="diagram-wrapper" #svgContainer></div>
+
+    <div class="summary">
+        <span class="color-label">
+            <span class="box blue"></span>
+            Diskinesia: {{ countBy1('blue') }}
+        </span>
+        <span class="color-label">
+            <span class="box yellow"></span>
+            Hipokinesia: {{ countBy1('yellow') }}
+        </span>
+        <span class="color-label">
+            <span class="box red"></span>
+            Akinesia: {{ countBy1('red') }}
+        </span>
+        <span class="color-label">
+            <span class="box white"></span>
+            Normal: {{ countBy1('white') }}
+        </span>
+    </div>
+
+    <div class="export-btns">
+        <button mat-raised-button color="primary" (click)="exportDiagram(1)">
+            Exportar Bull’s Eye
+        </button>
+    </div>
+
+    <!--app-segment-summary *ngIf="selectedSegment" [segment]="selectedSegment">
+    </app-segment-summary-->
+</mat-card>
+
+<br />
+<br />
+
+<!-- ================= Segunda sección ================= -->
+<mat-card class="bulls-eye-container">
+    <h2>Diagrama Alteración</h2>
+
+    <!-- Inyectamos el mismo SVG en otro container -->
+    <div class="diagram-wrapper" #svgContainer2></div>
+
+    <div class="summary">
+        <span class="color-label">
+            <span class="box white"></span>
+            No alterado: {{ countBy2('white') }}
+        </span>
+        <span class="color-label">
+            <span class="box purple"></span>
+            Alterado: {{ countBy2('purple') }}
+        </span>
+    </div>
+
+    <div class="export-btns">
+        <button mat-raised-button color="accent" (click)="exportDiagram(2)">
+            Exportar Alteración
+        </button>
+    </div>
+</mat-card>
